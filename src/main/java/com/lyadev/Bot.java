@@ -63,7 +63,7 @@ public class Bot extends TelegramLongPollingBot {
                     sendMsg(idchat, "Enter Pass:");
                     boolean check = true;
                     while (check){
-                        sendMsg(idchat,"Тест");
+                        sendMsg(idchat,message);
                         if(message.equals("Стоп")){
                             check = false;
                         }
