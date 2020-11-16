@@ -97,7 +97,7 @@ public class Bot extends TelegramLongPollingBot {
                     if(url[2].equals("link.tospotify.com")){
 
                         try {
-                            String name = new Spotify().getName(url[4]);
+                            String name = new Spotify().getName(url[3]);
                             System.out.println(name);
                         } catch (IOException e) {
                             e.printStackTrace();
