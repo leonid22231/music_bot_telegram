@@ -61,7 +61,9 @@ public class Bot extends TelegramLongPollingBot {
                         e.printStackTrace();
                     }
                     sendMsg(idchat, "Enter Pass:");
-
+                    while (!message.equals("Стоп")){
+                        sendMsg(idchat,"Тест");
+                    }
                     }
 
 
@@ -158,7 +160,7 @@ System.out.println(data);
                     }
                 }
                 if (message.equals("Поддержать бота")) {
-                    sendMsg(idchat, "Карта Сбербанк : 2202-2010-0225-4700");
+                    sendMsg(idchat, "Название трека по URL");
                 }
                 if (message.equals("Сигареты")) {
                     String url = "https://www.tabacum.ru/info/cigarette";
