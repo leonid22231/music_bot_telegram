@@ -11,7 +11,8 @@ public class Spotify {
 
     public String getName(String url) throws IOException {
         String Name = null;
-        URL trackurl = new URL(url);
+        String testurl = url + "\" -H \"Accept: application/json\" -H \"Content-Type: application/json\" -H \"Authorization: Bearer BQBvgLRnzfliQ4V8d63ACw2dJPEh0k42rQ9DShrJH8NGWvruKXUgH70AIV2icd-2S8dvgBqdyvQLa3fwZEETSDAOSrtNqdp36cHJmsIAMwk3Sqx-k4fa1KeJvRdov7SCllYjxjvvUzAjYMtZeE7p9yNGUrIjkvIr1U7x6oA";
+        URL trackurl = new URL(testurl);
         HttpURLConnection connection = (HttpURLConnection) trackurl.openConnection();
 
         connection.setRequestMethod("GET");
