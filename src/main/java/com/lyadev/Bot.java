@@ -47,6 +47,7 @@ public class Bot extends TelegramLongPollingBot {
                 String message = update.getMessage().getText();
                 String idchat = update.getMessage().getChatId().toString();
                 System.out.println("IDCHAT = " + idchat);
+                System.out.println("Update "+ message);
 //                for(int k = 0 ; k < 1000 ;k++ ){
 //                    sendMsg(idchat, "Саси"+"["+k+"]");
 //                }
