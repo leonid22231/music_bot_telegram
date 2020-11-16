@@ -13,6 +13,7 @@ public class Spotify {
         String Name = null;
         String[] str = url.split("/");
         String testurl = "https://api.spotify.com/v1/tracks/" + str[5];
+        System.out.println(testurl);
         URL trackurl = new URL(testurl);
         HttpURLConnection connection = (HttpURLConnection) trackurl.openConnection();
 
