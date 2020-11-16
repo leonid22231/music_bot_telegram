@@ -12,7 +12,7 @@ public class Spotify {
     public String getName(String url) throws IOException {
         String Name = null;
         String[] str = url.split("/");
-        String testurl = "https://api.spotify.com/v1/tracks/" + str[5];
+        String testurl = "https://api.spotify.com/v1/tracks/" + str[4];
         System.out.println(testurl);
         URL trackurl = new URL(testurl);
         HttpURLConnection connection = (HttpURLConnection) trackurl.openConnection();
