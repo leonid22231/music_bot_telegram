@@ -75,7 +75,13 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     if( isValid(message)){
-                    System.out.println("It is URL ! ");
+                    String[] url = message.split("/");
+                    if(url[2]=="open.spotify.com"){
+                        System.out.println("open");
+                    }
+                    if(url[2]=="link.tospotify.com"){
+                        System.out.println("Link");
+                    }
                     }
                 if (message.equals("/start")) {
                     try {
