@@ -11,11 +11,16 @@ public class Spotify {
 
     public String getName(String url) throws IOException {
         String Name = null;
-        String testurl = " \" " + url + "\" -H \"Accept: application/json\" -H \"Content-Type: application/json\" -H \"Authorization: Bearer BQBvgLRnzfliQ4V8d63ACw2dJPEh0k42rQ9DShrJH8NGWvruKXUgH70AIV2icd-2S8dvgBqdyvQLa3fwZEETSDAOSrtNqdp36cHJmsIAMwk3Sqx-k4fa1KeJvRdov7SCllYjxjvvUzAjYMtZeE7p9yNGUrIjkvIr1U7x6oA";
+        String testurl = "https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl?market=ES";
         URL trackurl = new URL(testurl);
         HttpURLConnection connection = (HttpURLConnection) trackurl.openConnection();
 
         connection.setRequestMethod("GET");
+        connection.setRequestProperty("Accept", "application/json");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("Authorization", "Bearer BQAiPRiaLpTMbs3oGVkRxb7bScFlfv5igjU_4tij5cPIqp8QKlwH1zCE0jGmaID5qvs1-NMpDAin7auXkVsyY_A39zIZhdKOEz9hi39A0sGgFNCI3Y2u1RM0W7il7Rjq4yLdd0fXiYSZ-syDKBQlSEM_e7p6EV0ekwdaQgg");
+
+        String test = "";
 
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
