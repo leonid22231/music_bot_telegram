@@ -9,10 +9,10 @@ import java.net.URL;
 
 public class Spotify {
 
-    public String getName(String url) throws IOException {
-        String Name = null;
-        String[] str = url.split("/");
-        String testurl = "https://api.spotify.com/v1/tracks/" + str[4];
+    public String getName(String trackid) throws IOException {
+       // String Name = null;
+       // String[] str = url.split("/");
+        String testurl = "https://api.spotify.com/v1/tracks/" + trackid;
         System.out.println(testurl);
         URL trackurl = new URL(testurl);
         HttpURLConnection connection = (HttpURLConnection) trackurl.openConnection();
