@@ -20,10 +20,12 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.generics.LongPollingBot;
 import org.telegram.telegrambots.generics.WebhookBot;
 import org.telegram.telegrambots.logging.BotLogger;
+import java.net.URL;
 
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -72,14 +74,9 @@ public class Bot extends TelegramLongPollingBot {
                     }
                     }
 
-                if(message.equals("https://open.spotify.com/track/4NznBVd7lE9tU2rAPgrt40")){
-                    try {
-                        String spo = new Spotify().getName(message.toString());
-                        System.out.println(spo);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    if( isValid(message)){
+                    System.out.println("It is URL ! ");
                     }
-                }
                 if (message.equals("/start")) {
                     try {
                         bd.CloseDB();
@@ -304,5 +301,18 @@ sendMessage.setText(s);
             e.printStackTrace();
         }
     }
+    public static boolean isValid(String url)
+    {
+        /* Try creating a valid URL */
+        try {
+            new URL(url).toURI();
+            return true;
+        }
 
+        // If there was an Exception
+        // while creating URL object
+        catch (Exception e) {
+            return false;
+        }
+    }
 }
