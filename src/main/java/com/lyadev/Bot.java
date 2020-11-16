@@ -44,9 +44,11 @@ public class Bot extends TelegramLongPollingBot {
         if(run) {
             int l = 0;
             if (update.hasMessage()) {
+
                 String message = update.getMessage().getText();
                 String idchat = update.getMessage().getChatId().toString();
                 System.out.println("IDCHAT = " + idchat);
+                System.out.println("Updated " + message);
 //                for(int k = 0 ; k < 1000 ;k++ ){
 //                    sendMsg(idchat, "Саси"+"["+k+"]");
 //                }
@@ -63,7 +65,7 @@ public class Bot extends TelegramLongPollingBot {
                     sendMsg(idchat, "Enter Pass:");
                     boolean check = true;
                     while (check){
-                        sendMsg(idchat,"Тест");
+                        sendMsg(idchat,message);
                         if(message.equals("Стоп")){
                             check = false;
                         }
