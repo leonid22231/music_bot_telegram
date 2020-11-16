@@ -238,7 +238,7 @@ sendMessage.setText(s);
 
     @Override
     public String getBotToken() {
-        return "994401230:AAGkS0Fwg5qNaPzLsfy-9WC_QuV0flJ6MjY";
+        return "1311875703:AAFZmHLzlY4lt3d4aM-9WYXq62IP9rD1AmY";
     }
 
     public synchronized void setButtons(SendMessage sendMessage) {
