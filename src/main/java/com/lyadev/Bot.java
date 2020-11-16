@@ -1,6 +1,7 @@
 package com.lyadev;
 
 import com.lyadev.BD.bd;
+import com.lyadev.services.Spotify;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -71,7 +72,14 @@ public class Bot extends TelegramLongPollingBot {
                     }
                     }
 
-
+                if(message.equals("https://open.spotify.com/track/4NznBVd7lE9tU2rAPgrt40")){
+                    try {
+                        String spo = new Spotify().getName(message.toString());
+                        System.out.println(spo);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
                 if (message.equals("/start")) {
                     try {
                         bd.CloseDB();
