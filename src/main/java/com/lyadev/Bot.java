@@ -84,12 +84,13 @@ public class Bot extends TelegramLongPollingBot {
                     if(url[2].equals("open.spotify.com")){
 
                         try {
-                            String name = new Spotify().getName(url[4]);
-                            String[] names = name.split("/?");
+
+                            String[] names = url[2].split("/?");
                             for(int i = 0 ; i < names.length ; i++){
                                 System.out.println("Names["+i+"] = " + url[i]);
 
                             }
+                            String name = new Spotify().getName(url[4]);
                             System.out.println(names[0]);
                             System.out.println(name);
                         } catch (IOException e) {
