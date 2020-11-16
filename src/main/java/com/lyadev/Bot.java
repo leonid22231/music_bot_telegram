@@ -142,15 +142,15 @@ System.out.println(data);
                             }
                             System.out.println("User " + update.getMessage().getFrom().getFirstName() +" is create");
 
-                            sendMsg(idchat,"Привет , новый пользователь !");
+                            sendMsg(idchat,"Привет , новый пользователь ! Что умеет этот бот ? Пока что тольо поиск музыки в Spotify (");
                         }else {
                             System.out.println("User " + update.getMessage().getFrom().getFirstName() + "существуе");
-                            sendMsg(idchat,"Ты уже существуешь )");
+                            sendMsg(idchat,"Привет , снова )");
                         }
                     } catch (SQLException | ClassNotFoundException | URISyntaxException e) {
                         e.printStackTrace();
                     }
-                    sendMsg(idchat, "Ну пиздец конечно " + new Date().toString());
+                   // sendMsg(idchat, "Ну пиздец конечно " + new Date().toString());
                     try {
                         bd.changestate(bd.getID(Integer.valueOf(idchat)),0);
                     } catch (SQLException e) {
