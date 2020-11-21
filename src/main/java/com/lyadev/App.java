@@ -34,7 +34,7 @@ private static String SpotifyURL = "https://accounts.spotify.com/api/token";
         try {
             URL surl = new URL(SpotifyURL);
             HttpURLConnection connection = (HttpURLConnection) surl.openConnection();
-            connection.setRequestMethod("GET");
+            connection.setRequestMethod("POST");
             connection.setRequestProperty("code","code");
             connection.setRequestProperty("client_secret",SpotifyClientSecret);
             connection.setRequestProperty("client_id",SpotifyClientID);
