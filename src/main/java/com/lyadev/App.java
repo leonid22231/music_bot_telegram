@@ -26,7 +26,7 @@ public class App
 {
 private static String SpotifyClientID = "4d4f47f7f1294b2fb5119cf4928966c1";
 private static String SpotifyClientSecret = "f438908d11784af798afacbbb751d9fd";
-private static String SpotifyURL = "https://accounts.spotify.com/authorize";
+private static String SpotifyURL = "https://accounts.spotify.com/api/token";
     public static void main( String[] args ) throws SQLException, ClassNotFoundException, URISyntaxException {
         System.out.println("Starting...");
         bd.Conn();
@@ -35,9 +35,10 @@ private static String SpotifyURL = "https://accounts.spotify.com/authorize";
             URL surl = new URL(SpotifyURL);
             HttpURLConnection connection = (HttpURLConnection) surl.openConnection();
             connection.setRequestMethod("GET");
+            connection.setRequestProperty("code","code");
+            connection.setRequestProperty("client_secret",SpotifyClientSecret);
             connection.setRequestProperty("client_id",SpotifyClientID);
-            connection.setRequestProperty("response_type","code");
-            connection.setRequestProperty("redirect_uri","");
+
 
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
