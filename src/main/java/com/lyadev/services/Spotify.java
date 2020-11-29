@@ -21,7 +21,7 @@ public class Spotify {
         connection.setRequestProperty("Accept", "application/json");
         connection.setRequestProperty("Content-Type", "application/json");
 
-        connection.setRequestProperty("Authorization", "Bearer BQB_P5FdxLWcLQuu81CjXxB20LvLStOrBoDKRSG-FFcu5YzjutwgLnQYOUysnpflm3nvUG5OjKe7-1l0rTwsrTuyqTamDpPNt066KOuLSo6PuLsZC_pcW7w-8IN7WCdWiK0mjarctLP3OeiJpJZoqVl983vEPSiOZu4ow_U");
+        connection.setRequestProperty("Authorization", "Bearer BQDWX6ZA_Fu1ehQde_5mzZwCC-c-zkYSDdNoF-yiX9GtodF8x3buMYM-_rgNMFW0y13zTjTfIN_7HaKwMN26xeVPdqPp8xc5CusM57U-b5dkQpLvhRMrw019rFNJt4sW7cZfw1y0gT60-s0--kRijc-NLJnGxwmW9IodDzk");
 
         String test = "";
 
